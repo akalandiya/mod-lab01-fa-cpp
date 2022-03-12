@@ -14,13 +14,11 @@ unsigned int faStr1(const char *str) {
             if (isdigit(str[i])) {
                 isNum = true;
             }
-        }
-        else if (str[i] == ' ') {
+        } else if (str[i] == ' ') {
             if (inWord) {
                 if (!isNum) {
                     wordCount++;
-                }
-                else if (isNum) {
+                } else if (isNum) {
                     isNum = false;
                 }
                 inWord = false;
@@ -47,8 +45,7 @@ unsigned int faStr2(const char *str) {
                     isBLat = true;
                     isSLat = true;
                 }
-            }
-            else if (isFirst) {
+            } else if (isFirst) {
                 if (isBLat) {
                     if (!(str[i] >= 'a' && str[i] <= 'z')) {
                         isSLat = false;
@@ -81,10 +78,10 @@ unsigned int faStr3(const char *str) {
         if (str[i] != ' ') {
             inWord = true;
             symCount++;
-        }
-        else if (str[i] == ' ') {
+        } else if (str[i] == ' ') {
             if (inWord) {
                 inWord = false;
+                wordCount++;
             }
         }
         i++;
