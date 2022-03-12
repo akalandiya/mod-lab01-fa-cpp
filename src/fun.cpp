@@ -80,8 +80,7 @@ unsigned int faStr3(const char *str) {
                 inWord = true;
                 wordCount++;
             }
-        }
-        else if (str[i] == ' ') {
+        } else if (str[i] == ' ') {
             if (inWord) {
                 inWord = false;
             }
