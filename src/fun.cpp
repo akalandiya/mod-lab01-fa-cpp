@@ -52,8 +52,7 @@ unsigned int faStr2(const char *str) {
                     }
                 }
             }
-        }
-        else if (str[i] == ' ') {
+        } else if (str[i] == ' ') {
             if (inWord) {
                 if (isSLat) {
                     wordCount++;
