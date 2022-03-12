@@ -75,12 +75,15 @@ unsigned int faStr3(const char *str) {
     int i = 0;
     while (str[i]) {
         if (str[i] != ' ') {
-            inWord = true;
             symCount++;
-        } else if (str[i] == ' ') {
+            if (!inWord) {
+                inWord = true;
+                wordCount++;
+            }
+        }
+        else if (str[i] == ' ') {
             if (inWord) {
                 inWord = false;
-                wordCount++;
             }
         }
         i++;
